@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row">
+    <div class="col-md-8">
+        <h1 class="mb-3">Welcome to My iRacing Garage</h1>
+        <p>
+            iRacing is my favorite sim racing platform. It combines realistic physics, detailed tracks,
+            and competitive online racing so I can practice racecraft without leaving my desk.
+        </p>
+        <p>
+            I focus on improving lap times, racecraft, and consistency by running practice sessions
+            and official races in my favorite cars and tracks.
+        </p>
+        <p>
+            If you want help getting faster or safer in iRacing, you can use the coaching calculator
+            to see how much personalized tutoring would cost.
+        </p>
+        <a class="btn btn-primary mt-3" asp-controller="Home" asp-action="Coaching">
+            Go to Coaching Calculator
+        </a>
+    </div>
+    <div class="col-md-4">
+        <img src="~/img/iracing-inline-color-blue.png" class="img-fluid rounded mb-3" alt="iRacing screenshot 1" />
+        <img src="~/img/iracing-icon-color-white.png" class="img-fluid rounded" alt="iRacing screenshot 2" />
+    </div>
 </div>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Coaching Calculator";
+    var hourlyRate = 30;
+}
+
+<h1 class="mb-3">iRacing Coaching Calculator</h1>
+<p>
+    Enter how many hours of coaching you want, and I’ll show you the total cost.
+</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="mb-3">
+            <label for="hoursInput" class="form-label">Number of hours</label>
+            <input type="number" class="form-control" id="hoursInput" min="1" placeholder="Enter hours">
+            <div id="hoursError" class="text-danger mt-1" style="display:none;">
+                Please enter a positive number of hours.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="rateInput" class="form-label">Hourly rate (USD)</label>
+            <input type="text" class="form-control" id="rateInput" value="@hourlyRate" readonly>
+        </div>
+
+        <button id="btnCalculate" class="btn btn-primary mb-3">
+            Calculate Total
+        </button>
+
+        <div class="mb-3">
+            <label for="totalOutput" class="form-label">Total cost (USD)</label>
+            <input type="text" class="form-control" id="totalOutput" readonly>
+        </div>
+
+        <a asp-controller="Home" asp-action="Index">Back to Home</a>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/coaching.js"></script>
+}
+
